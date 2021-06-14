@@ -17,4 +17,8 @@ public class AppTest {
         assertTrue(true);
     }
 
+    @Test
+    void anotherTest() {
+        assertEquals(1, 12);
+    }
 }
