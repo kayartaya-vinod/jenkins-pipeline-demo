@@ -29,11 +29,12 @@ pipeline {
       }
     }
 
-    post {
-                success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
-            }
+    
+  }
+  post {
+    success {
+      junit '**/target/surefire-reports/TEST-*.xml'
+      archiveArtifacts 'target/*.jar'
+    }
   }
 }
