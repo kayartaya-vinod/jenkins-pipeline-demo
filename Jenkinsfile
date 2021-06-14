@@ -11,7 +11,7 @@ pipeline {
     stage('build'){
       steps {
         // expects mvn to be in OS PATH
-        sh 'mvn -DskipTests=true package'
+        sh 'mvn -DskipTests package'
       }
     }
     
