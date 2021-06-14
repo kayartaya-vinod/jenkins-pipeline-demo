@@ -2,10 +2,16 @@ pipeline {
   agent any
   
   stages {
+    stage('unit test'){
+      steps{
+        sh 'mvn clean test'
+      }
+    }
+  
     stage('build'){
       steps {
         // expects mvn to be in OS PATH
-        sh 'mvn clean package'
+        sh 'mvn -DskipTests=true package'
       }
     }
     
